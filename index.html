@@ -1,0 +1,74 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Interactive card details form with JS</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="card-container">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="images/bg-main-desktop.png">
+                    <img src="images/bg-main-mobile.png" alt="">
+                </picture>
+                <div class="card card-front">
+                    <img src="images/card-logo.svg" alt="logo" class="logo">
+                    <div>
+                        <div class="card-details">
+                            <h1 class="card-number">0000 0000 0000 0000</h1>
+                            <div>
+                                <p class="card-name">Jane Appleeseed</p>
+                                <p>
+                                    <span class="expiration-month">00</span>/<span class="expiration-year">00</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-back">
+                    <div class="cvc">000</div>
+                </div>
+
+            </div>
+            <div class="input-section">
+                <form action="">
+                    <div class="input-field">
+                        <label for="name">cardholder name</label>
+                        <input type="text" placeholder="e.g. Jane Appleeseed" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="number">Card number</label>
+                        <input type="text" placeholder="e.g 000-00000-0000-00" required>
+                    </div>
+                    
+                    <div class="input-row">
+                        <div class="input-field">
+                            <label for="" id='date'>Exp. Date (MM/YY)</label>
+                            <div class="date-input">
+                                <input type='text' placeholder="MM" id='month' name="month" aria-labelledby='date' class="date month-input" maxlength="2" required />
+                                <input type='text' placeholder="YY" id='year' name="year" aria-labelledby='date' class="date year-input" maxlength="2" required/>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <label for=" ">cvc</label>
+                            <input type="text " placeholder="e.g 123" required>
+                        </div>
+                    </div>
+                    <button class="btn">confirm</button>
+                </form>
+                <section class="modal">
+                    <img src="images/icon-complete.svg" alt="completed">
+                    <h2>Thank you!</h2>
+                    <p>we've added your credit details</p>
+                    <button class="btn">continue</button>
+                </section>
+            </div>
+        </div>
+        <script src="form.js"></script>
+    </body>
+
+</html>

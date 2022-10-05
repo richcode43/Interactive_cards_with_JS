@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+span {
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.container {
+    display: flex;
+}
+
+.card {
+    height: 190px;
+    width: 350px;
+    position: absolute;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transform: scale(1.1);
+    color: white;
+    text-transform: uppercase;
+}
+
+.card-front {
+    background-image: url(./images/bg-card-front.png);
+    background-size: 100% 100%;
+    left: 200px;
+    top: 120px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-front .logo {
+    width: 60px;
+    height: auto;
+}
+
+.card-details h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.card-details>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+.card-details>div p{
+    font-size: .8rem;
+}
+
+.card-back {
+    background-image: url(images/bg-card-back.png);
+    background-size: 100% 100%;
+    top: 380px;
+    left: 280px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cvc {
+    position: absolute;
+    color: white;
+    top: 85px;
+    right: 50px;
+    font-size: 14px;
+    
+}
+
+/* user input form section */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    padding: 1.5rem;
+    padding-top: 5rem;
+    position: relative;
+    top: 80px;
+    left: 50px;
+}
+
+.input-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-transform: uppercase;
+    max-width: 425px;
+    
+}
+.input-field label {
+    font-variant: small-caps;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+.input-field input{
+    display: block;
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border-color: rgba(128, 128, 128, 0.124);
+    margin: .5rem 0 .3rem 0;
+}
+
+::placeholder {
+    color: rgba(128, 128, 128, 0.607);
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.input-row {
+    display: flex;
+    column-gap: 1.3rem;
+}
+.input-row>* {
+    width: 100%;
+}
+
+.date-input{
+    display: flex;
+    gap: 0.3rem;
+}
+.date-input input{
+    display: inline-block;
+    width: 50%;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 8px;
+    height: 40px;
+    background: hsl(276, 70%, 9%);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+.modal{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%
+}
+.modal img{margin-bottom: 30px;}
+
+.modal h2{
+    text-transform: uppercase;
+   color: hsl(276, 70%, 9%);
+}
+.modal p{
+    margin: 15px 0 20px;
+    color: rgba(128, 128, 128, 0.607);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.modal button{
+    width: 50%;
+}
+/* @media (max-width: 900px ) {
+    .card-container img{
+        width: 100%;
+        height: 100;
+    }
+} */
+@media (max-width: 768px) {
+ 
+    .container {
+        flex-direction: column;
+    }
+    .card-container img{
+        width: 100%;
+        height: 100%;
+    }
+    .card-front{
+        top: 170px;
+        left: 50px;
+        z-index: 1;
+    }
+.card-back{
+    top: 40px;
+    left: 100px;
+}
+    .input-section{
+        left:0;
+        padding:5px;
+        width:100%;
+        margin: 0;
+    }
+    .input-field label{
+        font-size: 15px;
+    }
+    .input-field input{
+        height: 50px;
+    }
+    .btn{height: 45px;
+    font-size: 20px;}
+}
+@media (max-width: 600px){
+    .card-container img{
+        width: 100%;
+        height: auto;
+    }
+}
